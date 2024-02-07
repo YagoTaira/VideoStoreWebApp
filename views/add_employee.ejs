@@ -1,0 +1,21 @@
+<%- include ./partials/header %>
+    <h2>Add Employee</h2>
+    <div class="std-body">
+    <form action="/employee/add" method="post">
+      <label for="employee_name">Employee name</label>
+      <input type="text" name="employee_name" />
+      <br>
+      <label for="age">Age</label>
+      <input type="text" name="age">
+      <br>
+      <label for="adress">Address</label>
+      <input type="text" name="address">
+      <br>
+      <label for="phoneNo">Phone Number</label>
+      <input type="text" name="phoneNo">
+      <br>
+      <button class="btn btn-primary btn-sm active" type="submit">Add Employee</button>
+    </form>
+    <br>
+    <button onclick="window.location.href='/employee'" class="btn btn-secondary btn-sm active">Previous Page</button>
+<%- include ./partials/footer %>

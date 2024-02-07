@@ -1,0 +1,27 @@
+<%- include ./partials/header %>
+    <h2>Employee</h2>
+    <div class="std-body">
+    <% for(var i =0; i < employee.length; i++) { %>
+      <p>Name: <%= employee[i].employee_name %>
+        <br>
+        Address: <%= employee[i].address %>
+        <br>
+        Age: <%= employee[i].age %> years old
+        <br>
+        Phone no: <%= employee[i].phoneNo %> </p>
+        <div class="buttons">
+      <form action="/employee/update" method="get">
+        <input type="hidden" name="employee_id" value="<%= employee[i].employee_id %>"/>
+        <button type="submit">Update employee</button>
+      </form>
+      <form action="/employee/delete" method="get">
+        <input type="hidden" name="employee_id" value="<%= employee[i].employee_id %>">
+        <button type="submit">Delete employee</button>
+      </form>
+      </div>
+      <br>
+    <% } %>
+    <button onclick="window.location.href='/employee/add'" class="btn btn-primary btn-sm active">Add Employee</button>
+    <button onclick="window.location.href='/'" class="btn btn-secondary btn-sm active">Previous Page</button>
+    </div>
+<%- include ./partials/footer %>

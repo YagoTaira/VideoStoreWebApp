@@ -1,0 +1,21 @@
+<%- include ./partials/header %>
+    <h2>Add Customer</h2>
+    <div class="std-body">
+    <form action="/customer/add" method="post">
+      <label for="cust_name">Customer name</label>
+      <input type="text" name="cust_name" />
+      <br>
+      <label for="address">Address</label>
+      <input type="text" name="address">
+      <br>
+      <label for="age">Age</label>
+      <input type="text" name="age">
+      <br>
+      <label for="phoneNo">Phone Number</label>
+      <input type="text" name="phoneNo">
+      <br>
+      <button class="btn btn-primary btn-sm active" type="submit">Add Customer</button>
+    </form>
+    <br>
+    <button onclick="window.location.href='/customer'" class="btn btn-secondary btn-sm active">Previous Page</button>
+<%- include ./partials/footer %>

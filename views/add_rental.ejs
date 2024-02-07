@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title></title>
+      <link rel='stylesheet' href='/stylesheets/style.css' />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <h2>Add Rental</h2>
+    <div class="std-body">
+    <form action="/rental/add" method="post">
+      <label for="rent_date">Rental date</label>
+      <input type="text" name="rent_date"/>
+      <br>
+      <label for="return_date">Return date</label>
+      <input type="text" name="return_date"/>
+      <br>
+      <label for="cust_id">Customer name</label>
+      <select name="cust_id">
+        <% for(var i=0; i < customer.length; i++) { %>
+          <option value="<%= customer[i].cust_id %>"><%= customer[i].cust_name %></option>
+        <% } %>
+      </select>
+      <br>
+      <label for="employee_id">Employee name</label>
+      <select name="employee_id">
+        <% for(var i=0; i < employee.length; i++) { %>
+          <option value="<%= employee[i].employee_id %>"><%= employee[i].employee_name %></option>
+        <% } %>
+      </select>
+      <br>
+      <label for="movie_id">Movie name</label>
+      <select name="movie_id">
+        <% for(var i=0; i < movie.length; i++) { %>
+          <option value="<%= movie[i].movie_id %>"><%= movie[i].movie_name %></option>
+        <% } %>
+      </select>
+      <br>
+      <label for="cost">Cost</label>
+      <input type="text" name="cost"/>
+      <br>
+      <label for="returned">Returned</label>
+      <input type="checkbox" name="returned">
+      <br>
+      <button class="btn btn-primary btn-sm active" type="submit">Add rental</button>
+    </form>
+    <br>
+    <button onclick="window.location.href='/rental'" class="btn btn-secondary btn-sm active">Previous Page</button>
+  </div>
+  </body>
+</html>

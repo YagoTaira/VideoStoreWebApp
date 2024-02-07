@@ -1,0 +1,27 @@
+<%- include ./partials/header %>
+    <h2>Movie</h2>
+    <div class="std-body">
+      <% for(var i =0; i < movie.length; i++) { %>
+        <p>Name: <%= movie[i].movie_name %>
+          <br>
+          Rating: <%= movie[i].rating %>
+          <br>
+          Genre: <%= movie[i].genre %>
+          <br>
+          Release year: <%= movie[i].release_year %> </p>
+        <div class="buttons">
+          <form action="/movie/update" method="get">
+            <input type="hidden" name="movie_id" value="<%= movie[i].movie_id %>">
+            <button type="submit">Update movie</button>
+          </form>
+          <form action="/movie/delete" method="get">
+            <input type="hidden" name="movie_id" value="<%= movie[i].movie_id %>">
+            <button type="submit">Delete movie</button>
+          </form>
+        </div>
+      <br>
+    <% } %>
+    <button onclick="window.location.href='/movie/add'" class="btn btn-primary btn-sm active">Add Movie</button>
+    <button onclick="window.location.href='/'" class="btn btn-secondary btn-sm active">Previous Page</button>
+    </div>
+<%- include ./partials/footer %>

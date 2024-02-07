@@ -1,0 +1,36 @@
+<%- include ./partials/header %>
+    <h2>Rental</h2>
+    <div class="std-body">
+    <% for(var i =0; i < rental.length; i++) { %>
+      <p>Rent date: <%= rental[i].rent_date %>
+        <br>
+        Return date: <%= rental[i].return_date %>
+        <br>
+        Customer name: <%= rental[i].cust_name %>
+        <br>
+        Movie name: <%= rental[i].movie_name %>
+        <br>
+        Cost: <%= rental[i].cost %> euro
+        <br>
+        <% if(rental[i].returned) { %>
+          Rental status: Returned</p>
+        <% } else {%>
+          Rental status: Not returned </p>
+          <% } %>
+      <div class="buttons">
+        <form action="rental/update" method="get">
+          <input type="hidden" name="rent_id" value="<%= rental[i].rent_id %>"/>
+          <button type="submit">Update rent</button>
+        </form>
+        <form action="rental/delete" method="get">
+          <input type="hidden" name="rent_id" value="<%= rental[i].rent_id %>">
+          <button type="submit">Delete rent</button>
+        </form>
+      </div>
+    <br>
+    <% } %>
+    <br>
+    <button onclick="window.location.href='/rental/add'" class="btn btn-primary btn-sm active">Add Rental</button>
+    <button onclick="window.location.href='/'" class="btn btn-secondary btn-sm active">Previous Page</button>
+    </div>
+<%- include ./partials/footer %>

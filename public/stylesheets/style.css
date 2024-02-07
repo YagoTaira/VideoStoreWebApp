@@ -1,0 +1,47 @@
+html, body, .rental-status, .std-body{
+  height: 100%;
+}
+
+.rental-status, .main-title, .std-body, h2{
+  background-color: AntiqueWhite;
+}
+
+.error {
+  color: red;
+}
+
+.main-title{
+  text-align: center;
+}
+
+.form-inline {
+    display: flex;
+    margin-left: 650px;
+}
+
+.navbar, .std-body, .rental-status{
+  padding: 8px;
+}
+
+.rental-status, .std-body{
+  color: brown;
+  text-colo: black;
+  border: 10px solid;
+}
+
+h2{
+  color: brown;
+  text-colo: black;
+  border: 10px solid;
+  margin-bottom: 0px !important;
+}
+
+button{
+   color : black ;
+   font-weight: bold;
+   background-color: Orange;
+}
+
+.buttons {
+  display: flex;
+}

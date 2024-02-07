@@ -1,0 +1,27 @@
+<%- include ./partials/header %>
+    <h2>Customer</h2>
+    <div class="std-body">
+    <% for(var i =0; i < customer.length; i++) { %>
+      <p>Name: <%= customer[i].cust_name %>
+        <br>
+         Address: <%= customer[i].address %>
+         <br>
+         Age: <%= customer[i].age %> years old
+         <br>
+         Phone no: <%= customer[i].phoneNo %> </p>
+         <div class="buttons">
+          <form action="/customer/update" method="get">
+            <input type="hidden" name="cust_id" value="<%= customer[i].cust_id %>"/>
+            <button type="submit">Update customer</button>
+          </form>
+          <form action="/customer/delete" method="get">
+            <input type="hidden" name="cust_id" value="<%= customer[i].cust_id %>">
+            <button type="submit">Delete customer</button>
+          </form>
+        </div>
+      <br>
+    <% } %>
+    <button onclick="window.location.href='/customer/add'" class="btn btn-primary btn-sm active">Add Customer</button>
+    <button onclick="window.location.href='/'" class="btn btn-secondary btn-sm active">Previous Page</button>
+    </div>
+<%- include ./partials/footer %>
