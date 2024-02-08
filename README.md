@@ -1,11 +1,12 @@
-# Video Store Application
-Student Name: Yago Masanobu Taira
-Student Number: x19238568
+# Project name
+Video Store Web Application
 
-Student Name: Ahmed Ozair Chakari
-Student Number: X20447226
+# Members
+Name: Yago Masanobu Taira
+Student number: x19238568
 
-Project: Video Store App
+Name: Ahmed Ozair Chakari
+Student number: x20447226
 
 # Project Dependencies
 1. Node (v14.17.6)
