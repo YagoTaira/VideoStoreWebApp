@@ -12,7 +12,7 @@ Student number: x20447226
 1. Node (v14.17.6)
 2. npm (v6.14.15)
 3. MySQL (v8.0.26)
-4. Atom (1.58.0)
+4. VSCode (1.86.0)
 
 # Install Steps
 1. Navigate to the projects directory using the `cd` command
